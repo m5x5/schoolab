@@ -1,15 +1,16 @@
 var octopus = {
   init: () => {
     this.cardInputElem = document.getElementById('card-input');
+    alertView.init();
     cardView.init();
   },
   render: () => {},
   check: () => {
     if(this.cardInputElem.value == model.spanishVocab.spanish[model.count]){
-      alert('true');
+      alertView.render('True', 'Well done!');
       model.count++;
     } else {
-      alert('false');
+      alertView.render('False', 'Im sorry :(');
       alert('the correct answer was: ' + model.spanishVocab.spanish[model.count]);
     }
   },
