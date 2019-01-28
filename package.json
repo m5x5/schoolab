@@ -1,0 +1,23 @@
+{
+  "name": "school-assistant",
+  "version": "1.0.0",
+  "description": "This is a smart school assistant",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michael55555/school-assistant.git"
+  },
+  "author": "Michael55555",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Michael55555/school-assistant/issues"
+  },
+  "homepage": "https://github.com/Michael55555/school-assistant#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "vue": "^2.5.22"
+  }
+}
