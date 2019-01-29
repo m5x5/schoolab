@@ -11,7 +11,7 @@ iframe {
 body { 
   background-color: white; 
   color:var(--grey-text); 
-  margin:5vh 0 0 0; 
+  margin: 0; 
   display: flex; 
   flex-direction: column; 
   align-items: center; 
@@ -214,4 +214,25 @@ p {
   margin: 0;
   text-align: right;
   font-size: 6vw;
+}
+#logo {
+	height: 70%;
+	max-height: 100px;
+}
+
+nav div {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav {
+	height: 10vh;
+	width: 100%;
+	background-color: lightgray;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
