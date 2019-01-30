@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Michael55555/school-assistant#readme",
   "dependencies": {
+    "eslint-config-react-app": "^3.0.6",
     "express": "^4.16.4",
     "vue": "^2.5.22"
   }

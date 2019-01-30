@@ -1,5 +1,3 @@
-'use strict';
-
 let model = {
   config: {
     apiKey: 'AIzaSyD26NfyVG8pZLLPiHvbaRppXt9iVxb3eYE',
@@ -10,7 +8,7 @@ let model = {
     messagingSenderId: '911055983258'
   },
   user: {},
-}
+};
 
 let mainView = {
   add: () => {
@@ -31,7 +29,7 @@ let mainView = {
 
 let octopus = {
   init: () => {
-    
+
   },
   saveTask: () => {
     if (n.value !== '' && txt.value !== '') {
@@ -87,10 +85,10 @@ let octopus = {
       }
     });
   },
-}
+};
 
 onload = () => {
   octopus.init();
   firebase.initializeApp(model.config);
-}
+};
 // ABwppHHStbsmaNtbMCk4FFjGquFRTe1v5Tvw6QSc4wrXIm4YZPgCiph2b9SJxGg0wEHxmfBv0MfdPRp-Sz9_L888

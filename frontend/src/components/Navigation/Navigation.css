@@ -1,0 +1,18 @@
+#logo {
+	height: 100%;
+	max-height: 100px;
+}
+
+nav span {
+	height: 70%;
+}
+
+nav {
+	height: 10vh;
+	width: 100%;
+	background-color: lightgray;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
