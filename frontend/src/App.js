@@ -1,25 +1,29 @@
-import React, {Component} from 'react';
-import Navigation from './components/Navigation/Navigation.js';
-import {Route, Switch} from 'react-router-dom';
-import Content from './components/Content/Content.js';
-import Header from './components/Header/Header.js';
-import Footer from './components/Footer/Footer.js';
-import Vocabulary from './Vocabulary.js';
+import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+
+// Components imports
+import Navbar from './components/navigation/Navbar';
+import Landing from './components/landing/Landing';
+import Footer from './components/footer/Footer';
+
+// Import styling
+import './scss/main.scss';
 import './App.css';
 
 class App extends Component {
   render() {
-    return (<div className="App">
-      <Switch>
-        <Route exact="exact" path="/" component={Vocabulary}/>
-        <Route component={Vocabulary}/>
-      </Switch>
-
-      <Navigation/>
-      <Header/>
-      <Content/>
-      <Footer/>
-    </div>);
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
+          <Switch>
+            <Route exact path='/' component={Landing} />
+          </Switch>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    );
   }
 }
 
