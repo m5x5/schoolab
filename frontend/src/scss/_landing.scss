@@ -1,0 +1,13 @@
+.landing {
+    height: 100vh;
+    background-color: rgb(233, 233, 233);
+
+    &-content {
+        position: relative;
+        top: 30%;
+
+        &--title {
+            font-size: 5rem;
+        }
+    }
+}
