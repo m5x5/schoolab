@@ -1,6 +1,6 @@
 <template>
 <p>
-  <router-link to="/foo">Go to Foo</router-link>
-  <router-link to="/bar">Go to Bar</router-link>
+  <router-link to="/">Home</router-link>
+  <router-link to="/login">Login</router-link>
 </p>
 </template>

@@ -2,11 +2,11 @@
 import Header from './components/main/Header.vue';
 import Footer from './components/main/Footer.vue';
 
-import LandingPage from './components/home.vue';
-import LoginPage from './components/home.vue';
-import HelpPage from './components/home.vue';
-import BlogPage from './components/home.vue';
-import ParentsPage from './components/home.vue';
+import LandingPage from './components/Home.vue';
+import LoginPage from './components/Login.vue';
+import HelpPage from './components/Home.vue';
+import BlogPage from './components/Home.vue';
+import ParentsPage from './components/Home.vue';
 
 export const routes = [{
 	path: '/',
@@ -34,13 +34,6 @@ export const routes = [{
 	components: {
 		appHeader: Header,
 		appLanding: BlogPage,
-		appFooter: Footer
-	}
-}, {
-	path: '/parents',
-	components: {
-		appHeader: Header,
-		appLanding: ParentsPage,
 		appFooter: Footer
 	}
 }];

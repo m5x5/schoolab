@@ -1,6 +1,9 @@
 <template>
-  <div class="home">
-    <h1>Home</h1>
+  <div class="landing">
+    <div class="landing-content">
+      <h1 class="landing-content--title">Home</h1>
+
+    </div>
   </div>
 </template>
 <script>
