@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const {
 	promisify
 } = require('util');
+const cors = require('cors');
 
 const genSalt = promisify(bcrypt.genSalt);
 const hash = promisify(bcrypt.hash);
@@ -64,7 +65,7 @@ router.put('/', async (req, res) => {
 });
 
 // Login route
-router.post('/login', (req, res, next) => {
+router.post('/login', cors(), (req, res, next) => {
 	passport.authenticate('local', (err, user, info) => {
 		if (!user || err) {
 			console.log(user);

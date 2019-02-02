@@ -1,18 +1,21 @@
-var app = require('./app');
-var debug = require('debug')('app:server');
-var http = require('http');
-var cluster = require('cluster');
-var os = require('os');
+const app = require('./app');
+const debug = require('debug')('app:server');
+const http = require('http');
+const cluster = require('cluster');
+const os = require('os');
+const cors = require('cors');
+
+app.use(cors());
 
 // Worker for each cpu
 if (cluster.isMaster) {
 	for (var i = 0; i < os.cpus().length; i++) {
 		cluster.fork();
 	}
-	cluster.on('online', function(worker) {
+	cluster.on('online', worker => {
 		console.log('Worker ' + worker.process.pid + ' is online');
 	});
-	cluster.on('exit', function(worker, code, signal) {
+	cluster.on('exit', (worker) => {
 		console.log('Worker ' + worker.process.pid + ' exited');
 	});
 } else {

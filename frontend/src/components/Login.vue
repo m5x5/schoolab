@@ -7,9 +7,10 @@
   </div>
   <form class="form" action="index.html" method="post">
     <label for="username">Username</label>
-    <input type="text" name="username" placeholder="Enter your username"><br>
+    <input type="text" name="username" placeholder="Enter your username" v-model="username"><br>
     <label for="password">Password</label>
     <input type="password" name="password" placeholder="Enter your password">
+    <input type="submit" value="Submit" @click="submit">
   </form>
 </div>
 </template>
@@ -18,7 +19,18 @@ export default {
   name: 'login',
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      username: '',
+    }
+  },
+  methods: {
+    submit(e) {
+      e.preventDefault();
+      axios.defaults.baseURL = 'localhost:3050';
+      axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
+      axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+      axios.post('/api/login').then(console.log)
+        .catch(console.error)
     }
   }
 }
