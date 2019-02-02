@@ -1,5 +1,14 @@
+.landing {
+    height: 100vh;
+    background-color: rgb(233, 233, 233);
+}
 
+.header {
+    position: relative;
+    top: 30%;
 
-@import "navbar";
-@import "landing";
-@import "footer";
+    &-title {
+        font-size: 5rem;
+        font-weight: 500;
+    }
+}

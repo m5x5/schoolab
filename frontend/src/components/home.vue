@@ -1,21 +1,22 @@
 <template>
-  <div class="landing">
-    <div class="landing-content">
-      <h1 class="landing-content--title">Home</h1>
-
-    </div>
-  </div>
+<div class="landing">
+  <header class="header">
+    <h1 class="header-title">Home</h1>
+  </header>
+</div>
 </template>
+
 <script>
 export default {
   name: 'home',
-  data () {
+  data() {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
   }
 }
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+
+<style lang="scss" scoped>
+
 </style>

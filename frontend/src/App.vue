@@ -13,4 +13,11 @@ export default {
 </script>
 <style lang="scss">
 @import './scss/main.scss';
+:root {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+}
 </style>
