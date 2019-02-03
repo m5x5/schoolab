@@ -17,19 +17,19 @@ const userModel = require('../models/userModel');
 const cache = require('../configs/cache');
 
 const router = express.Router();
+router.use(cors());
 
 // POST / create user
-router.post('/', function(req, res, next) {
+router.post('/', (req, res, next) => {
 	passport.authenticate('local-register', {
 		session: false
-	}, function(err, user, info) {
+	}, (err, user, info) => {
 		console.log(err, user, info);
 		if (user) {
 			res.sendStatus(200);
 		} else {
 			res.sendStatus(400);
 		}
-	})(req, res, next);
 });
 
 // PUT / edit user
@@ -64,8 +64,8 @@ router.put('/', async (req, res) => {
 	}
 });
 
-// Login route
-router.post('/login', cors(), (req, res, next) => {
+// POST / login
+router.post('/login', (req, res, next) => {
 	passport.authenticate('local', (err, user, info) => {
 		if (!user || err) {
 			console.log(user);
@@ -88,7 +88,7 @@ router.get('/logout', async (req, res) => {
 		const user = await modelAct(userModel, {
 			_id: req.session.passport.user
 		}, 'findOne');
-		req.session.destroy(async (err) => {
+		req.session.destroy(async err => {
 			const opt = {
 				query: {
 					_id: user._id

@@ -13,6 +13,8 @@ const usersRouter = require('./routes/users');
 const config = require('./configs/config');
 const cache = require('./configs/cache');
 
+const cors = require('cors');
+
 const app = express();
 
 mongoose.connect(config.database, {
@@ -47,8 +49,8 @@ app
 	.use(passport.session());
 
 // All the routes
-app
-	.use('/api/users', usersRouter);
+app.get('/', cors(), (req, res) => res.send('You successfully started the backend server'));
+app.use('/api/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

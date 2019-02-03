@@ -1,3 +1,4 @@
+
 <template>
 <div>
   <div class="landing">
@@ -15,6 +16,7 @@
 </div>
 </template>
 <script>
+/* global axios */
 export default {
   name: 'login',
   data() {
@@ -26,11 +28,10 @@ export default {
   methods: {
     submit(e) {
       e.preventDefault();
-      axios.defaults.baseURL = 'localhost:3050';
+      axios.defaults.baseURL = 'http://localhost:3050';
       axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
       axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-      axios.post('/api/login').then(console.log)
-        .catch(console.error)
+      axios.post('/api/login').then(alert).catch(alert)
     }
   }
 }
