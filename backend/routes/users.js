@@ -30,6 +30,7 @@ router.post('/', (req, res, next) => {
 		} else {
 			res.sendStatus(400);
 		}
+	})({'Authorization':{email:'test@gmail.com', password:'Hello', name:'Test'}}, res, next);
 });
 
 // PUT / edit user
