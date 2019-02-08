@@ -1,8 +1,4 @@
 <template>
-<footer>
-  <router-link to="/">Home</router-link>
-  <router-link to="/login">Login</router-link>
-</footer>
 </template>
 
 <style lang="scss" scoped>
