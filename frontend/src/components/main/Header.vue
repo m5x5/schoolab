@@ -1,26 +1,13 @@
 <template>
-  <div class="navigation">
-    <div class="navigation-content container d-flex justify-content-center">
-      <div class="navigation-content-buttons d-flex align-items-center">
-        <div class="buttons-bg">
-
-        </div>
-        <div class="buttons-circlebg">
-
-        </div>
-        <div class="buttons">
-
-          <button class="login-button">
-            Login
-          </button>
-          <img class="logo" src="../../assets/logo.png" alt="">
-          <button class="register-button">
-            Register
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="navigation">
+  <button class="login-button">
+    Login
+  </button>
+  <img class="logo" src="../../assets/logo.png" alt="">
+  <button class="register-button">
+    Register
+  </button>
+</div>
 </template>
 
 <style lang="scss">
@@ -41,46 +28,9 @@ $circle-green: #47da84;
     height: 10rem;
     position: fixed;
     margin-top: 2rem;
-    &-background {
-        width: 100%;
-        position: absolute;
-        z-index: 100;
-    }
-
-    &-content {
-        height: 100%;
-        margin: 0 auto;
-        &-buttons {
-            position: relative;
-
-            .buttons {
-                position: relative;
-                z-index: 101;
-                &-bg {
-                    width: 107%;
-                    height: 43%;
-                    position: absolute;
-                    z-index: 50;
-                    left: -4%;
-                    top: 2.5rem;
-                    background: $light-blue;
-                    border-radius: 50px;
-                }
-
-                &-circlebg {
-                    width: 21%;
-                    height: 67%;
-                    position: absolute;
-                    z-index: 50;
-                    left: 50%;
-                    transform: translateX(-60%);
-                    top: 1.45rem;
-                    background: $light-blue;
-                    border-radius: 50px;
-                }
-            }
-        }
-    }
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
 
     .logo {
         margin-right: 2rem;
@@ -117,5 +67,4 @@ $circle-green: #47da84;
 
     }
 }
-
 </style>
