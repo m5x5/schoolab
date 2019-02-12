@@ -1,70 +1,85 @@
 <template>
 <div class="navigation">
-  <button class="login-button">
-    Login
-  </button>
-  <img class="logo" src="../../assets/logo.png" alt="">
-  <button class="register-button">
-    Register
-  </button>
+  <div class="container">
+    <button class="login-button">
+      Login
+    </button>
+    <img class="logo" src="../../assets/logo.png" alt="">
+    <button class="register-button">
+      Register
+    </button>
+  </div>
 </div>
 </template>
 
-<style lang="scss">
-$white: #fff;
-$dark-blue: #417DDD;
-$light-blue: #93b5ec;
+<style lang="scss" scoped>
 $bright-green: #47da84;
-$blue-green: #69bebe;
+$dark-blue: #417DDD;
+$normal-shadow: 3px 3px 6px 0 hsla(0, 0, 0,0.16);
+button {
+  font-family: 'Montserrat', sans-serif;
+}
 
-$circle-blue: #4ebdd8;
-$circle-purple: #afa4e3;
-$circle-red: #c86463;
-$circle-yellow: #afc58b;
-$circle-green: #47da84;
-
+button:active, button:hover {
+  outline:none;
+}
 .navigation {
     width: 100%;
-    height: 10rem;
-    position: fixed;
-    margin-top: 2rem;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+    height: 5rem;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+        background-color: white;
+        border-radius: 2.5rem;
+        height: 4.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem 0 1rem;
+        box-shadow: $normal-shadow;
+    }
 
     .logo {
-        margin-right: 2rem;
-        margin-left: 3rem;
+        background-color: white;
+        border: solid white 1rem;
+        border-radius: 100vmax;
     }
 
     .login-button {
         border: none;
         color: white;
-        padding: 5px 40px;
-        font-size: 1.5rem;
+        padding: 10px 20px;
+        font-size: 1.6rem;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        margin: 4px 2px;
+        margin: 2px 10px 2px 4px;
         cursor: pointer;
-        border-radius: 24px;
-        font-weight: 700;
+        border-radius: 48px;
+        font-weight: 600;
         background-color: $dark-blue;
+        width: 9.5rem;
+        box-shadow: $normal-shadow;
     }
-    .register-button {
-        border: none;
-        color: white;
-        padding: 5px 40px;
-        font-size: 1.5rem;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 24px;
-        font-weight: 700;
-        background-color: $bright-green;
 
+    .register-button {
+      border: none;
+      color: white;
+      padding: 10px 10px;
+      font-size: 1.6rem;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 2px 4px 2px 10px;
+      cursor: pointer;
+      border-radius: 48px;
+      font-weight: 600;
+      width: 9.5rem;
+      box-shadow: $normal-shadow;
+      background-color: $bright-green;
     }
 }
 </style>
